@@ -61,7 +61,7 @@ sub {
 }
 .contact {
   color: white;
-  margin: 20px;
+  margin: 20px 0;
   display: flex;
   justify-content: space-around;
   font-weight: 900;
