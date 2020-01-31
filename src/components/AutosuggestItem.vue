@@ -1,5 +1,5 @@
 <template>
-    <div @keydown="onKey">
+    <div>
         {{item}}
     </div>
 </template>
@@ -8,11 +8,6 @@ export default {
     name: "AutosuggestItem",
     props:{
         item: String
-    },
-    methods:{
-        onKey(){
-            console.log('key event')
-        }
-    }
+    }    
 }
 </script>

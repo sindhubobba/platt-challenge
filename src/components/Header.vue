@@ -12,7 +12,10 @@
       <input
         type="text"
         v-model="searchText"
-        @input="onChange"        
+        @input="onChange" 
+        @keydown="onKeyDown"
+        @keydown.enter="onEnter" 
+        @keydown.esc="onEscape"      
         placeholder="What are you looking for?"
       >
       <img src="@/assets/ic/black/ic_search.png" style="width:30px;height:30px;" alt="search">
@@ -25,8 +28,9 @@
             class="auto-suggest-list"
             v-for="(result,i) in results"
             :key="i"
+            :class="[selectedIndex === i ? 'focus' : '']"
             @click="setResult(result)">
-            <AutosuggestItem :item="result.name" @keydown="onKey"></AutosuggestItem>
+            <AutosuggestItem :item="result.name"></AutosuggestItem>
             </li>
         </ul>        
       </div>
@@ -45,7 +49,8 @@ export default {
       searchText: "",
       results: [],
       showAutosuggest: false,
-      noMatchFound: false
+      noMatchFound: false,
+      selectedIndex: 0
     };
   },
   methods: {
@@ -70,9 +75,25 @@ export default {
       this.searchText = result.name;
       this.showAutosuggest = false;
     },
-    onKey(){
-            console.log('key event')
-        }
+    onKeyDown(e){
+      if (!this.searchText.length) {
+        return;
+      }
+      if (e.keyCode === 38 && this.selectedIndex > 0) {
+        this.selectedIndex--;
+      }
+      if (e.keyCode === 40 && this.selectedIndex >= 0 && this.selectedIndex < this.results.length - 1) {        
+        this.selectedIndex++;
+      }      
+    }, 
+    onEnter(){      
+      this.setResult(this.results[this.selectedIndex]);
+      this.selectedIndex = 0;
+    }, 
+    onEscape(){
+      this.showAutosuggest = false;
+    }
+
   },
   watch: {
     searchText(val) {
@@ -129,11 +150,14 @@ export default {
   margin-bottom: 15px;
   cursor: pointer;
 }
-.auto-suggest-list:hover{
+/* .auto-suggest-list:hover{
   text-decoration: underline;
-}
+} */
 input:focus {
   outline: none;
+}
+.auto-suggest-list:hover, .focus {
+  font-weight: bold;
 }
 </style>
 
