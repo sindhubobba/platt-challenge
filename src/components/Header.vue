@@ -49,8 +49,7 @@ export default {
     };
   },
   methods: {
-    async onChange() {
-      console.log("input", this.searchText);
+    async onChange() {      
       if(this.searchText !== ""){        
         await axios.get("https://jsonplaceholder.typicode.com/users").then(response => {        
         this.results = response.data.filter(
