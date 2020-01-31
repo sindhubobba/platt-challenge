@@ -16,20 +16,12 @@
       <img src="../assets/image/ic_platt-u.png">
       <p>Platt University</p>
     </div>
-    <!-- <UtilityBox :imgUrl="'datacomm.png'" :imageTitle="'Super Tool Day & Dynamic Data Day'"></UtilityBox>
-    <UtilityBox :imgUrl="'/assets/image/hvac.png'" :imageTitle="'Branch Locations'"></UtilityBox>
-    <UtilityBox :imgUrl="'../assets/image/industrial.png'" :imageTitle="'Help Center'"></UtilityBox>
-    <UtilityBox :imgUrl="'../assets/image/lighting.png'" :imageTitle="'Platt University'"></UtilityBox>-->
   </div>
 </template>
 
 <script>
-import UtilityBox from "./UtilityBox";
 export default {
-  name: "Utilities",
-  components: {
-    UtilityBox
-  }
+  name: "Utilities"
 };
 </script>
 
@@ -47,7 +39,6 @@ export default {
   max-width: 200px;
   width: 200px;
   height: 200px;
-  position: relative;
   text-align: center;
 }
 
@@ -57,9 +48,6 @@ export default {
 
 .utility-group p {
   font-weight: 900;
-  position: absolute;
-  display: block;
-  bottom: 10px;
 }
 
 .utility-group img {

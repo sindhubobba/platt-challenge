@@ -25,24 +25,14 @@
       <div class="market-group">
         <img src="@/assets/image/utility.png">
         <p>Utility</p>
-      </div>
-      <!-- <Markets :imgUrl="'datacomm.png'" :imageTitle="'DataComm'"></Markets>
-      <Markets :imgUrl="'/assets/image/hvac.png'" :imageTitle="'HVAC'"></Markets>
-      <Markets :imgUrl="'../assets/image/industrial.png'" :imageTitle="'Industrial'"></Markets>
-      <Markets :imgUrl="'../assets/image/lighting.png'" :imageTitle="'Lighting'"></Markets>
-      <Markets :imgUrl="'../assets/image/energy.png'" :imageTitle="'Energy Efficiency'"></Markets>
-      <Markets :imgUrl="'../assets/image/utility.png'" :imageTitle="'Utility'"></Markets>-->
+      </div>      
     </div>
   </div>
 </template>
 
 <script>
-import Markets from "./Markets";
 export default {
-  name: "ProductMarkets",
-  components: {
-    Markets
-  }
+  name: "ProductMarkets"
 };
 </script>
 

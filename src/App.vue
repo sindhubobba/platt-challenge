@@ -91,12 +91,8 @@ body {
 .recently-viewed {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding: 0 10px 0 10px;
-  margin: 10px 0;
-}
-.recently-viewed > div {
-  margin: 20px;
+  justify-content: space-evenly;
+  margin: 20px 10px;
 }
 .recently-viewed img[alt="Todays deal"] {
   width: 100%;

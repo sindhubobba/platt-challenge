@@ -1,7 +1,9 @@
 <template>
   <div class="recent">
-    <span>Recently Viewed</span>
-    <span id="view">View all</span>
+    <div class="title-group">
+      <span>Recently Viewed</span>
+      <span id="view">View all</span>
+    </div>
     <div class="items">
       <img src="../assets/recent/11.png">
       <img src="../assets/recent/22.png">
@@ -20,23 +22,29 @@ export default {
 .recent {
   background-color: white;
   box-shadow: 0 0 10px #888888;
-  padding: 20px;
-  position: relative;
   font-weight: bold;
 }
 #view {
-  position: absolute;
-  right: 30px;
   color: green;
   cursor: pointer;
 }
 .items {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  flex-wrap: wrap
 }
 .items img {
   margin: 10px;
+}
+.title-group{
+  display:flex;
+  justify-content: space-between;
+  margin: 20px 10px;
+}
+@media screen and (max-width: 480px) {
+  .recent{
+    margin-top: 20px;
+  }
 }
 </style>
 
