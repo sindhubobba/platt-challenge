@@ -67,7 +67,7 @@ export default {
   box-sizing: border-box;
 }
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Verdana, Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #262626;
@@ -121,11 +121,10 @@ body {
     height: 75px;
     width: 75px;
     border-radius: 50%;
-  }
-  .img-group > img {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .small-items p {
     font-weight: bold;

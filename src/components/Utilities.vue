@@ -1,20 +1,36 @@
 <template>
   <div class="utilities">
     <div class="utility-group">
-      <img src="../assets/image/super-tool-day.png">
-      <p>Super Tool Day & Dynamic Data Day</p>
+      <div>
+        <img src="../assets/image/super-tool-day.png">
+      </div>
+      <div class="utility-title">
+        <p>Super Tool Day & Dynamic Data Day</p>
+      </div>
     </div>
     <div class="utility-group">
-      <img src="../assets/image/ic_location_b.png">
-      <p>Branch Locations</p>
+      <div>
+        <img src="../assets/image/ic_location_b.png">
+      </div>
+      <div class="utility-title">
+        <p>Branch Locations</p>
+      </div>
     </div>
     <div class="utility-group">
-      <img src="../assets/image/ic_helpcenter.png">
-      <p>Help Center</p>
+      <div>
+        <img src="../assets/image/ic_helpcenter.png">
+      </div>
+      <div class="utility-title">
+        <p>Help Center</p>
+      </div>
     </div>
     <div class="utility-group">
-      <img src="../assets/image/ic_platt-u.png">
-      <p>Platt University</p>
+      <div>
+        <img src="../assets/image/ic_platt-u.png">
+      </div>
+      <div class="utility-title">
+        <p>Platt University</p>
+      </div>
     </div>
   </div>
 </template>
@@ -38,8 +54,10 @@ export default {
   box-shadow: 0 3px 5px 1px #888888;
   max-width: 200px;
   width: 200px;
-  height: 200px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .utilities > div {
@@ -55,6 +73,9 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+}
+.utility-title{
+text-align: center;
 }
 
 @media screen and (max-width: 480px) {

@@ -5,7 +5,7 @@
         <div class="menu-img">
           <img src="@/assets/ic/black/ic_categories.png" alt="search">
         </div>
-        <div class="menu-title">Shop all categories</div>
+        <div class="menu-header">Shop all categories</div>
       </div>
     </div>
     <div class="item2">
@@ -82,7 +82,7 @@ export default {
   align-items: center;
 }
 .menu-group > div {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .menu-group > div:last-child {
   margin: none;
@@ -91,8 +91,8 @@ export default {
   height: 14px;
   width: 14px;
 }
-.menu-title {
-  font-size: 16px;
+.menu-header {
+  font-size: 20px;
   font-weight: 900;
 }
 .item1 {
@@ -121,7 +121,7 @@ export default {
   .categories > div {
     border-bottom: 1px solid gray;
   }
-  .menu-title::after {
+  .menu-header::after, .menu-title::after {
     content: url('../assets/ic/black/ic_arrow_forward.png');
     position: absolute;
     right: 20px;

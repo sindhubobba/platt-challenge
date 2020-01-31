@@ -91,6 +91,7 @@ export default {
       this.selectedIndex = 0;
     }, 
     onEscape(){
+      this.searchText = "";
       this.showAutosuggest = false;
     }
 
