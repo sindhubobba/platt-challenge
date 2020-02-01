@@ -5,9 +5,9 @@
       <span id="view">View all</span>
     </div>
     <div class="items">
-      <img src="../assets/recent/11.png">
-      <img src="../assets/recent/22.png">
-      <img src="../assets/recent/22.png">
+      <img src="../assets/recent/11.png" />
+      <img src="../assets/recent/22.png" />
+      <img src="../assets/recent/22.png" />
     </div>
   </div>
 </template>
@@ -30,20 +30,27 @@ export default {
 }
 .items {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap
+  justify-content: space-evenly;
 }
 .items img {
-  margin: 10px;
+  padding: 5px;
 }
-.title-group{
-  display:flex;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 930fd07... refactor layout
+.title-group {
+  display: flex;
   justify-content: space-between;
-  margin: 20px 10px;
+  padding: 10px 20px;
 }
 @media screen and (max-width: 480px) {
-  .recent{
+  .recent {
+    width: 100%;
+<<<<<<< HEAD
     margin-top: 20px;
+=======
+>>>>>>> 930fd07... refactor layout
   }
 }
 </style>

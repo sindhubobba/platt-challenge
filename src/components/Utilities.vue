@@ -2,35 +2,27 @@
   <div class="utilities">
     <div class="utility-group">
       <div>
-        <img src="../assets/image/super-tool-day.png">
+        <img src="../assets/image/super-tool-day.png" />
       </div>
-      <div class="utility-title">
-        <p>Super Tool Day & Dynamic Data Day</p>
-      </div>
+      <p class="utility-title">Super Tool Day & Dynamic Data Day</p>
     </div>
     <div class="utility-group">
       <div>
-        <img src="../assets/image/ic_location_b.png">
+        <img src="../assets/image/ic_location_b.png" />
       </div>
-      <div class="utility-title">
-        <p>Branch Locations</p>
-      </div>
+      <p class="utility-title">Branch Locations</p>
     </div>
     <div class="utility-group">
       <div>
-        <img src="../assets/image/ic_helpcenter.png">
+        <img src="../assets/image/ic_helpcenter.png" />
       </div>
-      <div class="utility-title">
-        <p>Help Center</p>
-      </div>
+      <p class="utility-title">Help Center</p>
     </div>
     <div class="utility-group">
       <div>
-        <img src="../assets/image/ic_platt-u.png">
+        <img src="../assets/image/ic_platt-u.png" />
       </div>
-      <div class="utility-title">
-        <p>Platt University</p>
-      </div>
+      <p class="utility-title">Platt University</p>
     </div>
   </div>
 </template>
@@ -45,42 +37,39 @@ export default {
 .utilities {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding: 0 10px 0 10px;
+  justify-content: space-evenly;
 }
 .utility-group {
   background-color: white;
-  padding: 10px;
   box-shadow: 0 3px 5px 1px #888888;
-  max-width: 200px;
-  width: 200px;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+  width: 160px;
 }
+<<<<<<< HEAD
+=======
 
-.utilities > div {
-  margin: 10px 20px;
-}
-
+>>>>>>> 930fd07... refactor layout
 .utility-group p {
   font-weight: 900;
+  max-width: 150px;
 }
-
 .utility-group img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  height: 90px;
 }
-.utility-title{
-text-align: center;
+.utility-title {
+  text-align: center;
 }
-
 @media screen and (max-width: 480px) {
   .utilities {
     flex-wrap: wrap;
+  }
+  .utility-group {
+    width: 150px;
+    margin: 5px;
   }
 }
 </style>

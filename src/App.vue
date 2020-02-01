@@ -5,19 +5,19 @@
     <div class="small-items">
       <div>
         <div class="img-group">
-          <img src="@/assets/ic/green/ic_line_style.png">
+          <img src="@/assets/ic/green/ic_line_style.png" />
         </div>
         <p>Categories</p>
       </div>
       <div>
         <div class="img-group">
-          <img src="@/assets/ic/green/ic_search.png">
+          <img src="@/assets/ic/green/ic_search.png" />
         </div>
         <p>Search</p>
       </div>
       <div>
         <div class="img-group">
-          <img src="@/assets/ic/green/ic_scanner.png">
+          <img src="@/assets/ic/green/ic_scanner.png" />
         </div>
         <p>Scan</p>
       </div>
@@ -25,14 +25,12 @@
     <ProductMarkets></ProductMarkets>
     <PlattPlus></PlattPlus>
     <div class="recently-viewed">
-      <div>
-        <img src="@/assets/panel/deal.png" alt="Todays deal">
-      </div>
+      <img src="@/assets/panel/deal.png" alt="Todays deal" />
       <RecentlyViewed></RecentlyViewed>
     </div>
     <Utilities></Utilities>
     <div class="app-banner">
-      <img src="@/assets/panel/app-get-banner.png" alt="App Banner">
+      <img src="@/assets/panel/app-get-banner.png" alt="App Banner" />
       <h3>Shop better, download the Platt App today</h3>
     </div>
     <SupportCenter></SupportCenter>
@@ -71,10 +69,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #262626;
+  width: 800px;
+  margin: 0 auto;
 }
 
 body {
-  background-color: lightgray;
+  background-color: #eee;
 }
 
 .app-banner {
@@ -91,20 +91,27 @@ body {
 .recently-viewed {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin: 20px 10px;
+  justify-content: space-around;
+  padding: 20px 10px;
+  align-items: flex-start;
 }
-.recently-viewed img[alt="Todays deal"] {
-  width: 100%;
-  height: 100%;
+.recently-viewed > * {
+  margin-bottom: 10px;
+}
+.recently-viewed > img {
+  height: 160px;
 }
 .small-items {
   display: none;
 }
 
 @media screen and (max-width: 480px) {
+  #app {
+    width: 100%;
+  }
   .recently-viewed {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
   .small-items {
     display: flex;
