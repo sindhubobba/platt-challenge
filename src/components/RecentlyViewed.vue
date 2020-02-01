@@ -23,6 +23,7 @@ export default {
   background-color: white;
   box-shadow: 0 0 10px #888888;
   font-weight: bold;
+  height: 160px;
 }
 #view {
   color: green;
